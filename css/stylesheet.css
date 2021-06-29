@@ -1,0 +1,16 @@
+#add-button{
+    background-color: #111;
+}
+
+svg{
+    shape-rendering: geometricPrecision;
+    text-rendering: geometricPrecision;
+    image-rendering: optimizeQuality;
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+}
+
+#confirm-icon{
+    width: 30px;
+    height: 30px;
+}
