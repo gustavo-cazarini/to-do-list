@@ -1,16 +1,132 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #000, #333, #000);
+    color: #fefefe;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.td-body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #11111153;
+    width: 30%;
+}
+
+.input-container{
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-todo{
+    color: #fff;
+    font-size: 1em;
+    width: 60%;
+    outline: none;
+    background: none;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    caret-color: #fff;
+}
+
+.input-todo:focus{
+    border-color: #006E99;
+    transition-duration: .7s;
+}
+
+.input-todo::placeholder{
+    color: #fff;
+    opacity: .8;
+}
+
+.add-button{
+    background: none;
+    border: 2px solid #767676;
+    border-radius: 3px;
+    color: green;
+    font-size: 18px;
+}
+
+.add-button:hover{
+    border-color: #006e99;
+    transition-duration: .5s;
+}
+
+.list{
+    max-height: 300px;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+.list-item{
+    text-decoration: underline;
+    padding: 3px;
+    border-bottom: 1px solid #0f0f0f;
+    border-top: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    user-select: none;
+}
+
+.list-item:hover{
+    background-color: #ffffff10;
+}
+
+.list-item:first-child{
+    border-top: none;
+}
+
+.list-item:last-child{
+    border-bottom: none;
+}
+
 #add-button{
-    background-color: #111;
-}
-
-svg{
-    shape-rendering: geometricPrecision;
-    text-rendering: geometricPrecision;
-    image-rendering: optimizeQuality;
-    fill-rule: evenodd;
-    clip-rule: evenodd;
-}
-
-#confirm-icon{
-    width: 30px;
+    width: 40px;
     height: 30px;
+}
+
+.delete{
+    background: none;
+    border: 2px solid #767676;
+    border-radius: 3px;
+    color: #c40101;
+    font-size: 20px;
+}
+
+.delete:hover{
+    border-color: #006e99;
+    transition-duration: .5s;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px #444;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #008080;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #066;
 }

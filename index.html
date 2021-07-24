@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>To Do List</title>
-        <meta charset="utf-8" />
-        <meta name="description" content="A simple to do list to organize your life!" />
-        <meta name="author" content="Gustavo M. Cazarini" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
-    </head>
-    <body>
-        <div class="td-body">
-            <div class="container">
-                <input id="input-todo" type="text" placeholder="Add to list"/>
-                <button id="add-button" onclick="addToList()">
-                    <svg id="confirm-icon" viewBox="0 0 100 100" xml:space="preserve">
-                        <polygon 
-                            style="fill:green; stroke:white; stroke-width:1;" 
-                            points="0,30 30,80 80,0 60,0 30,50 20,30"
-                        />
-                    </svg>
+
+<head>
+    <title>To Do List</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="A simple to do list to organize your life!" />
+    <meta name="author" content="Gustavo M. Cazarini" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="td-body">
+        <div class="container">
+            <div class="input-container">
+                <input id="input-todo" class="input-todo" type="text" placeholder="Add to list" autofocus />
+                <button id="add-button" class="add-button" onclick="addToList()">
+                    <i class="fas fa-check"></i>
                 </button>
+            </div>
 
-                <hr/>
+            <hr />
 
-                <div id="list" class="list">
-                    
-                </div>
+            <div id="list" class="list">
+
             </div>
         </div>
-        <!-- Script -->
-        <script src="js/script.js"></script>
-    </body>
+    </div>
+    <!-- Script -->
+    <script src="js/script.js"></script>
+</body>
+
 </html>

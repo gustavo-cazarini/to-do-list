@@ -6,9 +6,10 @@ function addToList() {
     else {
         document.getElementById('list').innerHTML +=
             `
-            <div class="list-item">
+            <div class="list-item" style="text-decoration:none;" 
+            onclick='let x = this;lt(x);'>
                 ${todo}
-                <button class="delete">X</button>
+                <button class="delete"><i class="fas fa-trash-alt trash-icon"></i></button>
             </div>
         `;
         var task_atual = document.querySelectorAll('.delete');
@@ -23,3 +24,20 @@ function addToList() {
     }
 }
 
+// lt = line-through
+function lt(x){
+    if(x.style.textDecoration=="none"){
+        x.style.textDecoration="line-through";
+        x.style.textDecorationColor="#008000";
+        x.style.textDecorationStyle="double";
+    }
+    else{
+        x.style.textDecoration="none";
+    }
+}
+
+document.addEventListener('keydown', function(e){
+    if(e.key=="Enter"){
+        document.getElementById("add-button").click();
+    }
+});
