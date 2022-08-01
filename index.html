@@ -4,33 +4,49 @@
 <head>
     <title>To Do List</title>
     <meta charset="utf-8" />
-    <meta name="description" content="A simple to do list to organize your life!" />
+    <meta name="description" content="A simple to do list to organize your tasks!" />
     <meta name="author" content="Gustavo M. Cazarini" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="td-body">
-        <div class="container">
-            <div class="input-container">
-                <input id="input-todo" class="input-todo" type="text" placeholder="Add to list" autofocus />
-                <button id="add-button" class="add-button" onclick="addToList()">
-                    <i class="fas fa-check"></i>
-                </button>
-            </div>
-
-            <hr />
-
-            <div id="list" class="list">
-
+    <main>
+        <div class="input-wrapper">
+            <input type="text" name="" id="task" autofocus placeholder="Enter your task">
+            <button id="open-modal" class="open-modal">
+                <svg width="16px" viewBox="0 0 16 16">
+                    <use href="/icons.svg#gear"></use>
+                </svg>
+            </button>
+            <button id="add-btn" class="add-btn">
+                <svg width="16" viewBox="0 0 16 16">
+                    <use href="/icons.svg#plus"></use>
+                </svg>
+            </button>
+        </div>
+        <div id="opt-modal" class="opt-modal">
+            <div class="content-modal">
+                <span class="close-modal">&times;</span>
+                <div class="flex">
+                    <div class="inp-group">
+                        <label for="date">Finish Date</label>
+                        <input type="date" id="date">
+                        <button id="today-btn">today</button>
+                    </div>
+                    <div class="inp-group">
+                        <label for="priority">Priority</label>
+                        <select name="" id="priority">
+                            <option value="1">Low</option>
+                            <option value="2" selected>Normal</option>
+                            <option value="3">High</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Script -->
+        <div id="container"></div>
+    </main>
     <script src="js/script.js"></script>
 </body>
 
